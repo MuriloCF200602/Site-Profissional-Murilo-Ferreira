@@ -1,0 +1,266 @@
+/* ==========================================
+   1. VARIÁVEIS DE TEMA E SOMBRAS
+   ========================================== */
+:root {
+    /* Tema Claro (Padrão) */
+    --bg-color: #f0f2f5;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --border-color: #e1e1e1;
+    --transition-speed: 0.3s;
+    
+    --box-shadow-section: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --box-shadow-header: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+body.dark-theme {
+    /* Tema Escuro */
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --primary-color: #000000;
+    --accent-color: #5dade2;
+    --border-color: #333333;
+    
+    --box-shadow-section: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --box-shadow-header: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================
+   2. CONFIGURAÇÕES GERAIS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* ==========================================
+   3. MENU DE NAVEGAÇÃO FIXO
+   ========================================== */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow-header);
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+#navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+#theme-toggle {
+    padding: 6px 15px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   4. ESTRUTURA DAS SEÇÕES E CENTRALIZAÇÃO
+   ========================================== */
+main {
+    max-width: 900px;
+    margin: 110px auto 50px;
+    padding: 0 20px;
+}
+
+.section {
+    background-color: var(--container-bg);
+    padding: 50px 40px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow-section);
+    scroll-margin-top: 100px; 
+    text-align: center; /* Centraliza todo o conteúdo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ==========================================
+   5. FOTO DE PERFIL
+   ========================================== */
+.profile-photo {
+    display: block;
+    margin: 10px auto 30px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    box-shadow: var(--box-shadow-header);
+}
+
+/* ==========================================
+   6. CONTEÚDO E LISTAS (SEM BULLETS)
+   ========================================== */
+.content p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.content ul {
+    list-style-type: none; /* Remove as bolinhas das listas */
+    padding: 0;
+    margin: 15px 0;
+}
+
+.content li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.btn-project {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* ==========================================
+   7. FORMULÁRIO DE CONTATO (AJUSTE DE TEXTOS)
+   ========================================== */
+#contato .content p {
+    margin-bottom: 35px; /* Espaço maior para não grudar no formulário */
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaço entre os campos do formulário */
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left; /* Alinha labels e campos à esquerda */
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaço entre o Label e a Caixa de texto */
+}
+
+.field label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input, textarea {
+    padding: 14px 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.15);
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+/* ==========================================
+   8. RODAPÉ E RESPONSIVIDADE
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    header { position: static; }
+    main { margin-top: 20px; }
+    .section { padding: 30px 20px; }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional | Murilo da Cunha Ferreira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button id="theme-toggle">Modo Escuro</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre" class="section">
+            <h1>Sobre Mim</h1>
+            <img src="assets/Foto.jpeg" alt="Foto Profissional de Murilo" class="profile-photo">
+            
+            <div class="content">
+                <p>
+                    Olá! Meu nome é <strong>Murilo da Cunha Ferreira</strong>, tenho 24 anos e sou um entusiasta da convergência entre tecnologia, engenharia e segurança. Com uma trajetória que une o universo digital ao operacional, possuo sólida experiência em áreas que abrangem desde o desenvolvimento de sistemas até a legislação trabalhista e previdenciária.
+                </p>
+                <p>
+                    Atualmente, atuo como Técnico em Segurança do Trabalho em uma das principais unidades hospitalares da região de Goiânia, onde aplico meus conhecimentos técnicos para garantir a integridade e a eficiência nos processos laborais. Sou movido pelo desafio das ciências exatas e possuo domínio técnico em Sistemas Operacionais Windows e Linux, além de experiência direta com programação, bancos de dados, computação em nuvem, Inteligência Artificial e Pacote Office (Word, Excel, PowerPoint).
+                </p>
+                <p>
+                    Apaixonado por tecnologia desde a infância, busco constantemente explorar as variadas aplicações da computação para otimizar sistemas complexos, promovendo ambientes de trabalho que sejam, simultaneamente, inteligentes, seguros e sustentáveis.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="formacao" class="section">
+            <h1>Formação Acadêmica</h1>
+            <div class="content">
+                
+                <h3>Técnicos e Profissionalizantes</h3>
+                <ul>
+                    <li>Técnico em Segurança do Trabalho</li>
+                </ul>
+
+                <br>
+                <h3>Graduações em Andamento</h3>
+                <ul>
+                    <li>Ciência da Computação</li>
+                    <li>Segurança da Informação</li>
+                    <li>Engenharia de Produção</li>
+                </ul>
+
+                <br>
+                <h3>Especialização Técnica & Expertise</h3>
+                <ul>
+                    <li><strong>Tecnologia e Sistemas:</strong> Administração e suporte em ambientes Windows e Linux, com sólidos conhecimentos em Nuvem, Banco de Dados, Inteligência Artificial, Programação e Pacote Office (Word, Excel, PowerPoint).</li>
+                    <li><strong>Segurança do Trabalho:</strong> Foco em legislação trabalhista, previdenciária, gestão de riscos ocupacionais e normas regulamentadoras (NRs).</li>
+                    <li><strong>Engenharia de Produção:</strong> Expertise em planejamento e controle da produção (PCP), otimização de fluxos e análise de custos produtivos. Atuação focada na gestão da qualidade, redução de desperdícios e melhoria contínua da eficiência operacional.</li>
+                </ul>
+
+                <br>
+                <h3>Planejamento Futuro</h3>
+                <ul>
+                    <li>Pós-Graduações em Engenharia de Segurança do Trabalho e Gestão de Projetos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="portfolio" class="section">
+            <h1>Portfólio</h1>
+            <div class="content">
+                <div class="project-item">
+                    <h3>Projeto: Calculadora Científica em Python</h3>
+                    <p>
+                        Desenvolvimento de uma calculadora científica completa utilizando Python e bibliotecas de interface gráfica. O software executa desde operações aritméticas básicas até funções matemáticas complexas, priorizando a precisão dos cálculos e uma interface intuitiva para o usuário.
+                    </p>
+                    <a href="https://github.com/MuriloCF200602/Projeto-da-Calculadora-Cientifica" target="_blank" class="btn-project">
+                        Ver repositório no GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contato" class="section">
+            <h1>Contato</h1>
+            <div class="content">
+                <p>Gostou do meu perfil multidisciplinar? Vamos conversar!</p>
+                
+                <form id="contact-form">
+                    <div class="field">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" placeholder="Seu email@dominio.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" rows="5" placeholder="Como posso ajudar seu projeto ou empresa?" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+                
+                <div id="form-feedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por <strong>Murilo da Cunha Ferreira</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
